@@ -67,7 +67,7 @@ const Chats = () => {
     <ChatList>
       {Object.entries(chats)
         ?.sort((a, b) => b[1].date - a[1].date)
-        .map((chat) => {
+        ?.map((chat) => {
           return (
             <UserChat
               key={chat[0]}

@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <HeadContainer>
-      <Logo>ChatMe</Logo>
+      <Logo>ChatMate</Logo>
       <ProfileContainer>
         <Profile>
           <Image src={currentUser?.photoURL} alt={currentUser?.displayName} />
