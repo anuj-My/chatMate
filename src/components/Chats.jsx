@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { UserContext } from "../context/UserProvider";
 import { db } from "../firebase/firebaseConfig";
 import { ChatContext } from "../context/ChatProvider";
+import { MobileContext } from "../context/MobileProvider";
 const ChatList = styled.section``;
 
 const UserChat = styled.div`
@@ -12,7 +13,6 @@ const UserChat = styled.div`
   align-items: center;
   display: flex;
   gap: 2rem;
-  /* border-bottom: 1px solid #ffffff56; */
   transition: all 0.3s ease;
   cursor: pointer;
 
@@ -43,8 +43,10 @@ const UserChatInfo = styled.div``;
 const Chats = () => {
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(UserContext);
+  const { setOnMobile, onMobile } = useContext(MobileContext);
   const { dispatch } = useContext(ChatContext);
 
+  console.log(onMobile);
   useEffect(() => {
     const getChats = () => {
       const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
@@ -61,6 +63,9 @@ const Chats = () => {
 
   const handleSelect = (u) => {
     dispatch({ type: "CHANGE_USER", payload: u });
+    if (window.innerWidth <= 768) {
+      setOnMobile(true);
+    }
   };
 
   return (

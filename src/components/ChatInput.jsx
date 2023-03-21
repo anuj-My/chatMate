@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useContext, useState } from "react";
 import styled from "styled-components";
 import {
@@ -14,7 +13,6 @@ import { FcAddImage } from "react-icons/fc";
 import { IoMdAttach } from "react-icons/io";
 import Button from "./Button";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { async } from "@firebase/util";
 import { db, storage } from "../firebase/firebaseConfig";
 import { UserContext } from "../context/UserProvider";
 import { ChatContext } from "../context/ChatProvider";

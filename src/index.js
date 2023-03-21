@@ -6,6 +6,7 @@ import ChatProvider from "./context/ChatProvider";
 
 import "./index.css";
 import App from "./App";
+import MobileProvider from "./context/MobileProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <ChatProvider>
-          <App />
+          <MobileProvider>
+            <App />
+          </MobileProvider>
         </ChatProvider>
       </UserProvider>
     </BrowserRouter>

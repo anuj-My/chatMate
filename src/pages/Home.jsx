@@ -4,6 +4,7 @@ import SideBar from "../components/SideBar";
 
 const Container = styled.section`
   display: flex;
+  overflow: hidden;
 `;
 
 const Home = () => {
