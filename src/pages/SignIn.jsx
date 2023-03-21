@@ -76,7 +76,7 @@ const SignIn = () => {
       const { user } = await signInUserWithEmailAndPassword(email, password);
       console.log(user);
       navigate("/");
-      //   reset();
+      reset();
     } catch (error) {
       console.log(error);
     }

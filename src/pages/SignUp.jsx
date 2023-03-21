@@ -109,6 +109,7 @@ const SignUp = () => {
       const date = new Date().getTime();
       const storageRef = ref(storage, `${displayName + date}`);
 
+      // eslint-disable-next-line
       const uploadTask = uploadBytesResumable(storageRef, file).then(() => {
         getDownloadURL(storageRef).then(async (downloadURL) => {
           try {
