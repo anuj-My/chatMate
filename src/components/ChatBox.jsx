@@ -14,7 +14,7 @@ const Container = styled.main`
   height: 100vh;
   width: 70%;
   color: white;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 
   @media screen and (max-width: 768px) {
     width: ${({ onMobile }) => (onMobile ? "100%" : "0")};
