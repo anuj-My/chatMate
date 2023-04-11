@@ -14,6 +14,7 @@ const Container = styled.aside`
 
   @media screen and (max-width: 768px) {
     width: ${({ onMobile }) => (onMobile ? "0" : "100%")};
+    display: ${({ onMobile }) => (onMobile ? "none" : "block")};
   }
 `;
 

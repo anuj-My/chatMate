@@ -18,8 +18,7 @@ const Container = styled.main`
 
   @media screen and (max-width: 768px) {
     width: ${({ onMobile }) => (onMobile ? "100%" : "0")};
-    transform: ${({ onMobile }) =>
-      onMobile ? " translateX(0%)" : " translateX(100%)"};
+    display: ${({ onMobile }) => (onMobile ? "block" : "none")};
   }
 `;
 
